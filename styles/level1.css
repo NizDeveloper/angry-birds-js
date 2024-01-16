@@ -1,0 +1,305 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica;
+}
+
+body {
+  width: 1024px;
+  margin: auto;
+  background-color: #000;
+  background-image: url(../img/fondoBody.jpeg);
+  background-size: cover;
+}
+
+.container {
+  height: 500px;
+  background-image: url("https://i.pinimg.com/originals/2c/24/ba/2c24ba2e0e1a2455cccc366a96efcbf0.jpg");
+  background-size: cover;
+
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  /*filter: grayscale(.5);*/
+}
+
+.clear svg {
+  background-color: #f8bd47;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #ffff9b;
+}
+.clear svg:hover {
+  fill: #000;
+  background-color: #ffff9b;
+  border: 2px solid #f8bd47;
+}
+
+.game-over {
+  height: 100%;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #000000d4;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1000;
+
+  display: none;
+}
+.text-game {
+  color: #FFF;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-game img {
+  width: 120px;
+}
+.victory {
+  height: 100%;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #000000d4;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1000;
+
+  display: none;
+}
+.text-victory {
+  color: #FFF;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-victory img {
+  width: 120px;
+}
+.stars svg {
+  width: 50px;
+  height: 50px;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.score {
+  position: relative;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  background-color: darkgoldenrod;
+}
+
+.live {
+  width: 32px;
+  height: 35px;
+  background-image: url(../img/red.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.game-area {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  bottom: 0px;
+  width: 100%;
+  height: 440px;
+}
+
+.birdBox {
+  width: 200px;
+  height: 120px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.resortera {
+  width: 40px;
+  height: 85px;
+  position: absolute;
+  bottom: 0px;
+  left: 80px;
+
+  background: url("../img/resortera.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.level {
+  width: 70%;
+  height: 300px;
+  position: absolute;
+  right: 0;
+}
+
+.block-short {
+  width: 43px;
+  height: 8px;
+  position: absolute;
+  background: url(../img/blockshort.png);
+  background-size: cover;
+}
+
+#block0 {
+  bottom: 5px;
+  left: 473px
+}
+#block2 {
+  left: 473px;
+  bottom: 50px;
+}
+
+.block-cube {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: url(../img/blockcube.png);
+}
+
+#block1 {
+  bottom: 13px;
+  left: 475px;
+}
+
+.block-large {
+  position: absolute;
+  width: 104px;
+  height: 10px;
+  background: url(../img/blocklarge.png);
+}
+
+#block5 {
+  bottom: 109px;
+  left: 443px;
+}
+
+#block8 {
+  bottom: 222px;
+  left: 443px;
+}
+
+.block-large2 {
+  position: absolute;
+  width: 10px;
+  height: 104px;
+  background: url(../img/blocklarge2.png);
+}
+
+#block3 {
+  bottom: 5px;
+  left: 455px;
+}
+#block4 {
+  bottom: 5px;
+  left: 525px;
+}
+
+#block6 {
+  bottom: 118px;
+  left: 465px;
+}
+
+#block7 {
+  bottom: 118px;
+  left: 517px;
+}
+
+.pig {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transform: scaleX(-1);
+  background-image: url(../img/pig.png);
+  background-size: cover;
+}
+
+#pig {
+  bottom: 117px;
+  left: 480px;
+}
+
+.bird {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: url(../img/redmov.png);
+  background-size: cover;
+}
+
+.desactivar:enabled {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: url(../img/redmov.png);
+  background-size: cover;
+}
+
+#bird {
+  top: 50px;
+  left: 80px;
+}
+
+#bird:hover {
+  cursor: grab;
+}
+
+.birdMov {
+  animation: MovimientoRed 5s steps(3) infinite;
+}
+
+@keyframes MovimientoRed{
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -95px;
+  }
+}
+
+.red {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: url(../img/redmov.png);
+  background-size: cover;
+}
+
+.blockDiv {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+}
